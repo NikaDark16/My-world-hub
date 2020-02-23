@@ -30,9 +30,9 @@ func set_animation(axis):
 		$AnimationPlayer.play("Up")
 	if axis == Vector2(0, 1):
 		$AnimationPlayer.play("Down")
-	if axis == Vector2(-1, 0):
+	if axis == Vector2(-1, 0) or axis == Vector2(-1, 1).normalized() or axis == Vector2(-1, -1).normalized():
 		$AnimationPlayer.play("Left")
-	if axis == Vector2(1, 0):
+	if axis == Vector2(1, 0) or axis == Vector2(1, 1).normalized() or axis == Vector2(1, -1).normalized():
 		$AnimationPlayer.play("Right")
 
 
